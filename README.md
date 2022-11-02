@@ -52,7 +52,7 @@ Downloading the following pre-trained backbones:
 
 > 1. [ResNet-50](https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-rsb-weights/resnet50_a1h-35c100f8.pth) pretrained on ImageNet-1K by [TIMM](https://github.com/rwightman/pytorch-image-models)
 > 2. [ResNet-101](https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-rsb-weights/resnet101_a1h-36d3f2aa.pth) pretrained on ImageNet-1K by [TIMM](https://github.com/rwightman/pytorch-image-models)
-> 3. [Swin-B](https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_base_patch4_window12_384.pth) pretrained on ImageNet-1K by [Swin-Transformer](https://github.com/microsoft/Swin-Transformer)
+> 3. [Swin-B](https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_base_patch4_window12_384_22kto1k.pth) pretrained on ImageNet by [Swin-Transformer](https://github.com/microsoft/Swin-Transformer)
 
 Create a directory 'backbones' to place the above backbones. The overall directory structure should be like this:
 
@@ -87,3 +87,13 @@ For testing, you have to prepare a pretrained model. You can train one by yourse
 
 ## BibTeX
 If you are interested in our paper, please cite:
+```
+@inproceedings{shi2022dense,
+  title={Dense Cross-Query-and-Support Attention Weighted Mask Aggregation for Few-Shot Segmentation},
+  author={Shi, Xinyu and Wei, Dong and Zhang, Yu and Lu, Donghuan and Ning, Munan and Chen, Jiashun and Ma, Kai and Zheng, Yefeng},
+  booktitle={European Conference on Computer Vision},
+  pages={151--168},
+  year={2022},
+  organization={Springer}
+}
+```
