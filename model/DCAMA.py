@@ -192,7 +192,7 @@ class DCAMA_model(nn.Module):
                                      align_corners=True).view(support_feat.size()[0], -1)
                 support_feat = support_feat.view(support_feat.size()[0], support_feat.size()[1], -1).permute(0, 2, 1).contiguous()
             else:
-                support_feat = torch.stack([support_feats[k][idx] for k in range(nshot)])
+                support_feat = torch.stack([support_feats[k][idx] for k in range(nshot)], dim=1)
                 support_feat = support_feat.view(-1, ch, ha * wa).permute(0, 2, 1).contiguous()
                 mask = torch.stack([F.interpolate(k.unsqueeze(1).float(), (ha, wa), mode='bilinear', align_corners=True)
                                     for k in support_mask])
